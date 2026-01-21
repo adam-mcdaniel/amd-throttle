@@ -1,7 +1,7 @@
 N_ITER?=64
 CC := gcc
 CFLAGS := -Wall -Wextra -O2
-HIPCC := hipcc
+HIPCC?=hipcc
 HIP_MPI_FLAGS := -O3 -DN_ITER=$(N_ITER) -I$(MPICH_DIR)/include -L$(MPICH_DIR)/lib -lmpi 
 GPU_ARCH?=gfx90a 
 HIP_MPI_FLAGS += --offload-arch=${GPU_ARCH}

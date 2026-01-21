@@ -1,2 +1,2 @@
-module load PrgEnv-amd/8.6.0
+source load-amd-env.sh
 make clean && make all
