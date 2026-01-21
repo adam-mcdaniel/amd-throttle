@@ -37,7 +37,7 @@ $ sbatch run.sh
 
 After the run has finished, use the [`identify-throttling.sh`](./identify-throttling.sh) script to see if any throttling registers status' changed throughout the run.
 
-### Changing the Metrics Collection Interval *(Default 10ms)*
+### Changing the Metrics Collection Interval *(Optional, Defaults to 10ms)*
 ---
 
 Run the script with the `WAIT_BETWEEN_METRICS_MS` variable set to the desired number of milliseconds between collections.
@@ -47,12 +47,12 @@ $ export WAIT_BETWEEN_METRICS_MS=5
 $ sbatch run.sh
 ```
 
-### Changing the Power-Cap *(Optional)*
+### Changing the Power-Cap *(Optional, Defaults to 300W)*
 ---
 
 The power cap is set at 300W in the SLURM script at [`run.sh`](./run.sh). Change or remove the `#SBATCH --gpu-power-cap=300` if you desire a different power cap or none at all.
 
-### Setting up with ScoreP *(Optional)*
+### Setting up with ScoreP *(Optional, Skipped by Default)*
 ---
 
 ```bash
