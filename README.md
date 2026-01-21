@@ -43,8 +43,8 @@ After the run has finished, use the [`identify-throttling.sh`](./identify-thrott
 Run the script with the `WAIT_BETWEEN_METRICS_MS` variable set to the desired number of milliseconds between collections.
 
 ```bash
-export WAIT_BETWEEN_METRICS_MS=5
-sbatch run.sh
+$ export WAIT_BETWEEN_METRICS_MS=5
+$ sbatch run.sh
 ```
 
 ### Changing the Power-Cap *(Optional)*
@@ -63,5 +63,5 @@ $ git clone https://github.com/adam-mcdaniel/amd-throttle
 
 Follow the instructions in the [ScoreP AMD repo](https://github.com/adam-mcdaniel/scorep-amd) and then build this project:
 ```bash
-HIPCC=scorep-hipcc ./build.sh
+$ HIPCC=scorep-hipcc ./build.sh
 ```
